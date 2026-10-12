@@ -1,17 +1,51 @@
-<<<<<<< HEAD
-### Solution
-Single CSV -> Star Schema (from scratch)
-1.  **Extract:** `restaurant-orders.csv` (8 cols) - real-world dirty data
-2.  **Transform:** Built dim_menu & dim_customer from fact table, deduplication, time intelligence (peak hours, weekday/weekend)
-3.  **Load:** 3 tables to PostgreSQL (fact_orders 500k rows, dim_menu, dim_customer)
+# 🍽️ HoReCa ETL Pipeline
 
-### Key Business Metrics Built
-- Revenue per hour/day (for staff scheduling)
-- Top 10 dishes by revenue & quantity
-- Avg check by Payment Method
-- Weekend vs Weekday performance
-||||||| empty tree
-=======
-# horeca-etl-pipeline
-ETL pipeline for HORECA
->>>>>>> a80117eda4cb0bb19fab589fdac98cc24af4cf16
+![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-DWH-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-ETL-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+
+End-to-end ETL пайплайн...
+
+End-to-end ETL pipeline для аналитики продаж в сфере HoReCa (Hotel, Restaurant, Cafe).
+
+Проект демонстрирует полный цикл Data Engineering: от извлечения сырых данных до загрузки в аналитическое хранилище и построения витрин.
+
+### 🏗️ Архитектура
+
+`Raw CSV / API` → `Python (Pandas) ETL` → `PostgreSQL (DWH)` → `SQL Витрины / Analytics`
+
+**Пайплайн состоит из 3 шагов:**
+1.  **Extract:** Чтение сырых данных о продажах, заказах и продуктах из CSV
+2.  **Transform:** Очистка, дедупликация, нормализация, расчет KPI (выручка, средний чек, ABC-анализ)
+3.  **Load:** Загрузка в PostgreSQL, создание схемы star-schema и аналитических витрин
+
+### 🛠️ Tech Stack
+- **Language:** Python 3.11+
+- **Data Processing:** Pandas, SQLAlchemy
+- **Database:** PostgreSQL
+- **Orchestration Ready:** Структура готова для Airflow / Docker
+- **Version Control:** Git, GitHub
+
+### 📁 Структура проекта
+.
+├── data/
+│   ├── raw/              # сырые данные
+│   └── processed/        # очищенные данные
+├── etl/
+│   ├── extract.py
+│   ├── transform.py
+│   └── load.py
+├── sql/
+│   ├── dwh_schema.sql    # DDL для DWH
+│   └── marts.sql         # витрины данных
+├── main.py               # точка входа в пайплайн
+├── requirements.txt
+└── .env.example
+
+### 🚀 Как запустить
+
+1.  Клонировать репо:
+```bash
+git clone https://github.com/ajarochka/horeca-etl-pipeline.git
+cd horeca-etl-pipeline
