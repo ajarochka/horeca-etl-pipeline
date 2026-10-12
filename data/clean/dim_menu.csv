@@ -1,0 +1,10 @@
+item_id,food_item,category,price,cost,margin_pct
+1,Brownie,Dessert,12.33,3.95,67.96
+2,Burger,Main,14.93,4.78,67.98
+3,Cake,Dessert,12.26,3.92,68.03
+4,Fries,Starter,6.04,1.93,68.05
+5,Ice Cream,Dessert,3.8,1.22,67.89
+6,Pasta,Main,3.07,0.98,68.08
+7,Pizza,Main,20.26,6.48,68.02
+8,Salad,Starter,7.64,2.44,68.06
+9,Soup,Starter,17.38,5.56,68.01
