@@ -17,7 +17,7 @@ engine = create_engine(f"postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{D
 print(f"Connecting to {DB_NAME}...")
 
 def load():
-    # Читаем файлы которые создал etl.py
+    # Читаем файлы
     fact = pd.read_csv(CLEAN_DIR / "fact_orders.csv")
     dim_menu = pd.read_csv(CLEAN_DIR / "dim_menu.csv")
     dim_customer = pd.read_csv(CLEAN_DIR / "dim_customer.csv")
