@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ### Solution
 Single CSV -> Star Schema (from scratch)
 1.  **Extract:** `restaurant-orders.csv` (8 cols) - real-world dirty data
@@ -9,3 +10,8 @@ Single CSV -> Star Schema (from scratch)
 - Top 10 dishes by revenue & quantity
 - Avg check by Payment Method
 - Weekend vs Weekday performance
+||||||| empty tree
+=======
+# horeca-etl-pipeline
+ETL pipeline for HORECA
+>>>>>>> a80117eda4cb0bb19fab589fdac98cc24af4cf16
